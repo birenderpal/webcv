@@ -1,0 +1,138 @@
+.bp-card{
+    @include flexbox-display();
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    background: #fff;
+    border-radius: $border-radius;
+    margin: 0.75rem 1.25rem;    
+    //min-width: 344px;;
+    &.clickable{
+      @include material-box-shadow(1);
+      &:hover{
+        @include material-box-shadow(8);        
+      }
+      a{
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    > hr {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    @include above-displays-size("sm"){
+      &.clickable{
+      @include material-box-shadow(2)
+      }
+      border:      $border-width solid $border-color;
+
+    }
+    &.bp-card-standard{
+      width:344px;
+      height:382px;
+    }
+    
+    &.bp-card-large{
+      width:344px;
+      height:510px;
+    }    
+}
+
+
+.bp-card-content{
+    flex: 1 1 auto;
+}
+.bp-card-header{
+    background:         white;
+    line-height:        2.75rem;
+    padding:            0.75rem 1.25rem;
+    border-bottom:      $border-width solid $border-color;
+    @include top-border-radius(4px);
+}
+
+.bp-card-media{
+    min-height: 64px;
+    overflow: hidden;
+    background-color: $bp-theme-color;
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-origin: padding-box;
+    background-attachment: scroll;
+    box-sizing: border-box;
+}
+.bp-card-media > img {
+    object-fit: cover;            
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bp-card-body{
+    color: rgba(0,0,0,.54);
+    font-size: 1rem;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 16px;
+    p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+// Card image
+
+
+.bp-card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+}
+.bp-card-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display:block;
+}
+.bp-card-img {
+  width: 100%;
+  min-height:194px;
+}
+
+// Card image caps
+.bp-card-img-top {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  @include top-border-radius(4px);
+}
+
+.bp-card-img-bottom {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  @include bottom-border-radius(4px);
+}
+
+.bp-card-footer{
+  flex: 0 1 auto;
+  padding: 0.75rem 1.25rem;
+  border-top: $border-width solid $border-color;
+  &:last-child {
+    @include border-radius(0 0 $border-radius $border-radius);
+  }
+  p{
+    //display: block;
+    text-align: center;
+
+  }
+}
+
+.bp-card-collection{
+  justify-content:space-evenly;
+}
+

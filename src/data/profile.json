@@ -1,0 +1,175 @@
+    {        
+        "page":
+        {
+            "pageTitle": "Profile",
+            "pageSubtitle": "No legacy is so rich as honesty.",
+            "hasQuote":true,
+            "author":"William Shakespeare",
+            "heading":"An IT, Cloud & Integration architect with almost 15 years of experience in hands-on software development, business analysis, project management, process improvement and automation"
+        },
+        "body":
+        [
+            {
+                "sectionTitle":"About me",
+                "sectionData":
+                {
+                    "lines":
+                    [
+                        {
+                            "line":"I have more than 14 years of experience working for companies across the globe with roles in development, solution design, project management, solution consulting, account management"
+                        },
+
+                        {
+                            "line":"I am extremely curious and my curiosity drives me to learn, know, question, analyze and find the solution to the problems i have at hand. If i don't have an answer to something I would be honest in saying that rather than obfuscate things by use of jargons. At the same time not knowing something triggers me to learn more."
+                        },
+                        
+                        {
+                            "line_none":"Born and raised in India but now a NZ citizen.\\nI have worked and lived in India, UK and New Zealand. I would say i'm lucky to have had oppotunity to work in different parts of the world and appreciate the culture, making friends from all over the world and learning from some really talented people",
+                            "line-style":""
+                        }
+
+                    ]
+
+                }
+            },
+            {
+                "sectionTitle":"What drives me",
+                "sectionData":
+                {
+                    "lines":
+                    [
+                        {
+                            "line":"I enjoy challenges and working in a team of talented individuals.",
+                            "line-style":""
+                        },
+                        {
+                            "line":"Result oriented and a keen desire to learn and improve",
+                            "line-style":""
+                        },
+
+                        {
+                            "line":"I love solving problems, travelling, appreciate different cultures, cooking, sports and long drives."
+                        }
+
+                    ]
+
+                }
+            }
+        ],
+        "aside":
+        [
+            {
+                "sectionTitle":"Education",
+                "sectionData":
+                {
+                    "lines":
+                    [
+                        {
+                            "line":"Electronics and Communication engineering",
+                            "line-style":""
+                        }
+                    ]
+                }
+            },
+            {
+                "sectionTitle":"Languages",
+                "sectionData":
+                    {
+                        "items":
+                        [
+                            {
+                                "item":"English",
+                                "itemStyle":"span-6",
+                                "value":"Native or Bilingual",
+                                "valueStyle":"span-12"
+                            },
+                            {
+                                "item":"Spanish",
+                                "itemStyle":"span-6",
+                                "value":"Fluent",
+                                "valueStyle":"span-12"
+                            },
+                            {
+                                "item":"Hindi",
+                                "itemStyle":"span-6",
+                                "value":"Native",
+                                "valueStyle":"span-12"
+                            }
+                        ]
+                    }
+            },
+            {
+                "sectionTitle":"How I can help",
+                "sectionData":
+                {
+                    "lines":
+                    [
+                        {
+                            "line":"Available for freelance work.",
+                            "line-style":""
+                        },
+                        {
+                            "line":"Cloud Architect/Developer, Solution Architect or Business Analyst.",
+                            "line-style":""
+                        } ,
+                        {
+                            "line":"Would consider an interesting permanent position, give me a call to discuss.",
+                            "line-style":""
+                        }
+
+                    ]
+                }
+            },
+            {
+                "sectionTitle":"Areas of interest",
+                "sectionData":
+                {
+                    "lines":
+                    [
+                        {
+                            "line":"Cloud, Integration, Digital transformation, Machine Learning, AI, Agile, Web",
+                            "line-style":""
+                        }
+
+                    ]
+                }
+            },
+            {
+                "sectionTitle":"Location",
+                "sectionData":
+                {
+                    "lines":
+                    [
+                        {
+                            "line":"Auckland NZ",
+                            "line-style":""
+                        },
+                        {
+                            "line":"Open to relocate to other countries and cities.",
+                            "line-style":""
+                        }
+
+                    ]
+                }
+            },
+            {
+                "sectionTitle":"Visas",
+                "sectionData":
+                {
+                    "lines":
+                    [
+                        {
+                            "line":"New Zealand Citizen",
+                            "line-style":""
+                        },    
+                        {
+                            "line":"US Work Visa",
+                            "line-style":""
+                        }
+
+                    ]
+                }
+            }
+
+    ]
+}

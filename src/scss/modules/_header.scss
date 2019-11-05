@@ -1,0 +1,136 @@
+.bp-header{
+    //@include flexbox-display();
+    width:100%;
+    height: max-content;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-wrap: nowrap;    
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    top:0px;
+    //@include material-box-shadow(4);   
+}
+
+.bp-header-fixed{
+    
+    //background: black;
+    z-index:$zindex-ultimate;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &.is-scrolled{
+        min-height: 3.5rem;
+        @include above-displays-size("sm"){
+            min-height: 2.5rem;
+        }
+        
+        //background:#fff;
+        //background: rgba(45,45,45,0.98);
+        background-color: rgba(0,0,0,0.85);
+        @include material-box-shadow(5);           
+    }    
+    
+    
+    -webkit-transition: -webkit-box-shadow 200ms linear;
+    transition: -webkit-box-shadow 200ms linear;
+    -o-transition: box-shadow 200ms linear;
+    transition: box-shadow 200ms linear;
+    transition: box-shadow 200ms linear, -webkit-box-shadow 200ms linear;
+}
+
+
+.circle{
+    @include circle(150px);
+    border:solid 5px white;
+    overflow:hidden;
+    img {
+        width:100%;
+        height:auto;
+    }
+    background:white;
+    //transition:transform 0.5s ease-out; // note that we're transitioning transform, not height!
+    //height:auto;
+    /*
+    transform:scaleY(1); // implicit, but good to specify explicitly
+    transform-origin:top;    
+    .collapsed{
+        height:auto;
+        transform:scaleY(0);
+    } */        
+}
+
+
+
+.bp-cv-title{
+    text-align:center;
+    margin:auto;
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    .bp-cv-title-text{
+        color: black;
+        text-align: center;        
+        font-family: 'Roboto Slab', sans-serif;
+    }
+    /*
+    transition:transform 0.5s ease-out; // note that we're transitioning transform, not height!
+    height:auto;
+    transform:scaleY(1); // implicit, but good to specify explicitly
+    transform-origin:top;   
+    .collapsed{
+        height:auto;
+        display:none;
+        transform:scaleY(0);
+    
+    }         
+*/
+
+}
+
+.bp-header-nav{
+    display: flex;
+    flex-direction: column;
+
+    @include above-displays-size("sm"){
+        flex-direction: row;
+    }
+
+    padding: 0;    
+    background: #fff;
+    //background:rgba(0, 0, 0, 0.08);
+    opacity: 0.5;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    align-self: stretch;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+        position: sticky!important; 
+        z-index: 999;
+        top: 0px!important;
+
+}
+.bg-image  {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bg-image > img{
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    min-width: 100%;
+    @include add-blur(8px);
+    @include below-displays-size("md"){
+            display: none;
+    }
+
+}

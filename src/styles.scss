@@ -1,0 +1,61 @@
+@import './scss/base/normalize';
+
+//variables
+@import './scss/base/variables';
+
+// import bootstrap
+@import '~@material/react-chips/index.scss';
+
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~@material/react-text-field/index.scss';
+@import '~@material/react-button/index.scss';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+//base 
+@import './scss/base/base';
+
+//Mixins
+@import './scss/base/mixins';
+
+// Layout
+
+
+
+// Modules
+@import './scss/modules/shadows';
+@import './scss/modules/typography';
+@import './scss/modules/buttons';
+@import './scss/modules/card';
+@import './scss/modules/tab';
+@import './scss/modules/header';
+@import './scss/modules/footer';
+@import './scss/modules/nav';
+@import './scss/modules/main';
+@import './scss/modules/textfield';
+@import './scss/modules/form';
+@import './scss/modules/hero';
+@import './scss/modules/page';
+@import './scss/modules/page-text';
+
+// pages
+
+@import './scss/pages/skills';
+@import './scss/pages/aboutme';
+@import './scss/pages/site';
+@import './scss/pages/experience';
+@import './scss/pages/contact';
+
+
+
+
+//@import './scss/modules/nav_old';
+
+@import './scss/layout/layout';
+
+
+
+
+// themes
+
+@import './scss/themes/themes';
+

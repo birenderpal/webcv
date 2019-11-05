@@ -1,0 +1,18 @@
+.bp-text-field{
+    margin-top: 24px;
+    width: 100%;
+    
+    @include mdc-text-field-line-ripple-color($font-color-orange);
+    @include mdc-text-field-label-color(rgba(0,0,0,.54));
+    @include mdc-text-field-bottom-line-color(rgba(0,0,0,.12));
+    @include mdc-text-field-hover-bottom-line-color(rgba(0,0,0,.54));	
+    @include mdc-text-field-fill-color($white);
+    @include mdc-text-field-hover-bottom-line-color(rgba(0,0,0,.12));
+    
+}
+.bp-text-area{
+    min-height: 150px;
+    @include mdc-text-field-focused-outline-color($font-color-orange);
+    @include mdc-text-field-hover-outline-color(rgba(0,0,0,.12));
+    @include mdc-text-field-outline-color(rgba(0,0,0,.12));
+}

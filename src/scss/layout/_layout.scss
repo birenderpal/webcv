@@ -1,0 +1,232 @@
+%container{
+    padding-right: $gutter-width / 2;
+    padding-left: $gutter-width / 2;
+    @include below-displays-size("md"){
+        padding-right:$gutter-width / 3;
+        padding-left: $gutter-width / 3;
+    }
+}
+
+.bp-container{
+    //margin:auto;
+    @extend %container;
+    @include below-displays-size("sm"){
+        max-width: map-get($container-max-widths,"sm");
+    }
+    @include below-displays-size("md"){
+        max-width: map-get($container-max-widths,"md");
+    }
+    @include below-displays-size("lg"){
+        max-width: map-get($container-max-widths,"lg");
+    }
+    @include below-displays-size("xl"){
+        max-width: map-get($container-max-widths,"xl");
+    }
+}
+// full width container with no padding
+.bp-container-full{
+    width: 100%;    
+}
+
+.bp-row {
+    margin-right: - $gutter-width / 2;
+    margin-left: - $gutter-width / 2;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;    
+}
+.bp-row-gutter{
+    margin-top: $gutter-width / 2;
+    margin-bottom: $gutter-width / 2;
+}
+/*
+%col{
+    width: 100%;
+    height:100%;
+    padding-right: $gutter-width / 2;
+    padding-left: $gutter-width / 2;
+}
+[class*='col-'] {
+    @extend %col;
+}
+
+@include above-displays-size("sm"){
+    [class*='col-'] {
+        float: left;
+    }
+    .col-1{
+        width: $col-1;
+    }
+    .col-2{
+        width: $col-2;        
+    }
+    .col-3{
+        width: $col-3;        
+    }
+    .col-4{
+        width: $col-4;
+    }
+    .col-5{
+        width: $col-5;
+    }
+    .col-6{
+        width: $col-6;
+    }
+    .col-7{
+        width: $col-7;
+    }
+    .col-8{
+        width: $col-8;
+    }
+    .col-9{
+        width: $col-9;
+    }
+    .col-10{
+        width: $col-10;
+    }
+    .col-11{
+        width: $col-11;
+    }
+    .col-12{
+        width: $col-12;
+    }   
+    .col-right{
+        float:right;
+    } 
+}
+.col-centered{
+    margin:auto;
+    float:none;
+}
+.col-full{
+    padding:0;
+}
+
+.bp-centered{
+    @include flexbox-display();
+    justify-content:center;
+    align-items:center;
+}
+
+@include above-displays-size("sm"){
+    .flex-container{        
+        @include flexbox-display();
+        flex-wrap: wrap;
+        [class*='col-'] {
+            float: none;
+        }
+        .col-1{
+            flex: 0 1 $col-1;
+        }
+        .col-2{
+            flex: 0 1 $col-2;        
+        }
+        .col-3{
+            flex: 0 1 $col-3;       
+        }
+        .col-4{
+            flex: 0 1 $col-4;
+        }
+        .col-5{
+            flex: 0 1 $col-5;
+        }
+        .col-6{
+            flex: 0 1 $col-6;
+        }
+        .col-7{
+            flex: 0 1 $col-7;
+        }
+        .col-8{
+            flex: 0 1 $col-8;
+        }
+        .col-9{
+            flex: 0 1 $col-9;
+        }
+        .col-10{
+            flex: 0 1 $col-10;
+        }
+        .col-11{
+            flex: 0 1 $col-11;
+        }
+        .col-12{
+            flex: 0 1 $col-12;
+        }           
+    }
+}
+
+.flex-container .col-right{
+    flex-direction: row-reverse;
+} 
+*/
+
+
+.enable-flex{
+    @include flexbox-display();
+    flex-flow:row wrap;
+    @include below-displays-size("md"){
+        flex-flow: column;
+        align-items: center;
+    }
+    &.space-around{
+        justify-content: space-around;
+    }
+    &.space-evenly{
+        justify-content: space-evenly;
+    }
+    &.space-between{
+        justify-content: space-between;
+    }
+
+}
+.enable-flex-col{
+    @include flexbox-display();
+    flex-flow:column wrap;
+}
+.reverse-flex{
+    flex-direction: row-reverse;
+}
+.align-center{
+    text-align: center;
+}
+.col-centered{
+    margin:auto;
+    float:none;
+}
+
+/*
+Span classes for custom column size
+Span would span to 100% width for small deviecs, above small it would be %age.
+*/
+
+%grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter-width/3;
+    padding-left: $gutter-width/3;
+}
+@for $i from 1 through $grid-columns{
+    .span-#{$i} {
+        @extend %grid-column;  
+    }
+}
+@include above-displays-size("sm"){
+    @for $i from 1 through $grid-columns{
+        .span-#{$i} {
+            padding-right: $gutter-width/2;
+            padding-left: $gutter-width/2;
+            @include make-col($i,  $grid-columns);
+        }
+    }    
+}    
+
+// Remove the negative margin from default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    > [class*="span-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

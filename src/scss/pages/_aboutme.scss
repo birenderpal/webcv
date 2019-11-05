@@ -1,0 +1,68 @@
+.aboutme{
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem!important;
+}
+.heading{
+    color: #fff;
+}
+.profile-section{
+    background: #fff;
+    .divider{
+        border:1px solid #eaeaea;
+        margin: 2rem 0;
+    }
+}
+.detail-item{
+    margin-bottom: 1rem;
+    .section-text{
+        p {
+            margin-bottom: 4px!important;
+        }
+    }
+}
+.page-about{
+    margin-top: 100vh;
+    background: #31355b;
+    .page-container{
+        background: #31355b;
+        .quote{
+            color:silver;
+        }
+        .side-col{
+            padding-top:1rem;
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+        
+            .section-text{
+                font-size: 15px;
+            }
+            .languages{
+                margin: 8px 0;
+                flex-flow: row nowrap;
+            }
+            @include below-displays-size("md"){
+                margin-top:1rem; 
+            }
+        }
+        //color:#fff!important;
+        /*
+        background: #FC5C7D; 
+        background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  
+        background: linear-gradient(to right, #6A82FB, #FC5C7D); 
+        
+        /*
+        border:none;
+        background: #000046;  
+        background: -webkit-linear-gradient(to right, #1CB5E0, #000046); 
+        background: linear-gradient(to right, #1CB5E0, #000046); 
+        .page-header-title{
+            color: #fff;
+        }
+        .section-title{
+            color:#fff;
+        }
+        */
+    }
+}

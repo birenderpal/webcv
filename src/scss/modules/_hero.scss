@@ -1,0 +1,113 @@
+.bp-hero{
+    padding:33.33vh 0;
+    position:fixed;
+    top:0px;
+    min-height: 100vh;
+    z-index: $zindex-dropdown;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    //background-color:#000;
+    
+    background: #FFB75E;  
+    background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E); 
+    background: linear-gradient(to right, #ED8F03, #FFB75E);
+        
+    
+    //background-image:url('images/code.jpg');
+    /*
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    //background-position: 0px -500px;
+    */
+}
+
+.bp-hero-body-container{
+    @include flexbox-display();
+    align-items: center;
+    justify-content: center;
+    .bp-hero-body{
+        position:relative;
+        color:white;
+        height:100%;
+        flex: 1 1 auto;
+    }
+}
+
+
+.bp-hero-bg-image{
+        height:100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        img{
+            position: absolute;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
+            margin: auto;
+            min-width: 100%; 
+            @include below-displays-size("md"){
+                display:none;
+            }
+        }
+}
+
+
+.bp-hero-text{
+  color: white;
+  font-weight: bold;
+  font-family: 'Nothing You Could Do', cursive      
+
+}
+.bp-hero-title{
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: calc(32px + 1.5vw);
+    @include above-displays-size("sm"){
+        @include include-leading-trailing-line(5rem,2.5px);
+    }      
+  }
+  
+.hero-button-row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    a{
+        flex: 0 1 0;
+        margin-right: 8px;
+    }
+}
+.bp-btn-hero{
+    margin-top:2rem;
+    background:transparent;
+    border:4px solid white;
+    color: white;   
+    padding: 8px 30px;
+    font-size: 1rem;
+    font-weight: normal;  
+    transition: all 0.3s ease 0s;      
+    border-radius:1px;
+    @include cast-shadow(1);
+    &:active {
+        border-style: none;
+        
+    }
+}
+
+.bp-btn-hero:hover{
+    cursor: pointer;
+    background:white;
+    //border:1px solid white;
+    color: $black!important;   
+    padding: 8px 30px;
+    font-size: 1rem;
+    font-weight: normal;  
+    text-decoration: none;
+    transition: all 0.3s ease 0s;  
+}

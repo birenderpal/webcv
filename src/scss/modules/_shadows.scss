@@ -1,0 +1,50 @@
+// classes to over-ride default shadow or add shadows to an element
+
+.bp-shadow-1 {
+    @include material-box-shadow(1);
+}
+.bp-shadow-2 {
+    @include material-box-shadow(2);
+}
+.bp-shadow-3 {
+    @include material-box-shadow(3);
+}
+.bp-shadow-4 {
+    @include material-box-shadow(4);
+}
+.bp-shadow-5 {
+    @include material-box-shadow(5);
+}
+.bp-shadow-6 {
+    @include material-box-shadow(6);
+}
+.bp-shadow-7 {
+    @include material-box-shadow(7);
+}
+.bp-shadow-8 {
+    @include material-box-shadow(8);
+}
+.bp-shadow-9 {
+    @include material-box-shadow(9);
+}
+.bp-shadow-10 {
+    @include material-box-shadow(10);
+}
+.bp-shadow-11 {
+    @include material-box-shadow(11);
+}
+.bp-shadow-12 {
+    @include material-box-shadow(12);
+}
+.bp-shadow-13 {
+    @include material-box-shadow(13);
+}
+.bp-shadow-14{
+    @include material-box-shadow(14);
+}
+.bp-shadow-15{
+    @include material-box-shadow(15);
+}
+.bp-shadow-16{
+    @include material-box-shadow(16);
+}

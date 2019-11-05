@@ -1,0 +1,65 @@
+.bp-background-black{
+    background: black;
+    opacity: 0.5;
+}
+
+.bp-background-white{
+    background: white;
+    opacity: 0.5;
+}
+.bp-primary-color{
+    color: white;
+}
+
+.bp-secondary-color{
+    color: black;
+}
+
+.bp-tertiary-color{
+    color:#424242;
+}
+
+.page-theme-blue{
+    background: #31355b;
+    .page-container{
+        background: transparent;     
+        .page-header-subtext{
+            color: silver;
+        }
+    }
+    
+}
+.page-theme-red-1{
+    background: #f35f5e;
+    .page-container{
+        background: transparent;
+        .page-header-title{
+            color: white;
+        }        
+        .page-header-subtext{
+            color: white;
+        }
+    }
+}
+
+.page-theme-red{
+    background: #d04e4d;
+    .page-container{
+        background: transparent;
+        .page-header-title{
+            color: white;
+        }        
+        .page-header-subtext{
+            color: white;
+        }
+    }
+}
+.page-theme-greyblue{
+    background: #3f3d56;
+    .page-container{
+        background: transparent;     
+        .page-header-subtext{
+            color: silver;
+        }
+    }
+}

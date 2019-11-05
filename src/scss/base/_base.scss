@@ -1,0 +1,22 @@
+// Change all elements to use border-box
+html {
+    box-sizing: border-box;
+    /*
+    font-size:16px;
+    @include below-display-size("md"){
+        font-size:14px;
+    }
+    */
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+

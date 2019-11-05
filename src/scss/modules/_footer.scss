@@ -1,0 +1,46 @@
+footer {
+    grid-area: footer;
+  }
+.footer{
+    position: relative;
+    min-height: 32px;
+    background: $footer-background-color;
+    color: $gray-600;;
+    width:100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+[class*='footer-icons-']{
+  color:white;
+  @include flexbox-display();
+}
+
+.footer-icons-right{
+  justify-content: flex-end;
+}
+
+.footer-icons-left{
+  justify-content: flex-start;
+}
+.footer-icons-centre{
+  justify-content: center;
+}
+
+
+.footer-icon-item{
+  height: 2rem;
+  font-size:1.5rem;
+  width: 2rem;
+  padding: 0 2rem;
+  margin: auto;
+  transition: all 0.3s ease 0s;
+  color:$white;
+
+}
+.footer-icon-item>img{
+  width: 100%;
+  height: auto;
+  overflow:hidden;
+}

@@ -1,0 +1,9 @@
+.bp-main{
+    position: relative;
+    margin-top:2.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex: 1 0 auto;
+}

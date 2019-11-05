@@ -1,0 +1,200 @@
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+$bp-theme-color: rgb(255,64,129)!default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+$footer-background-color:rgb(50, 54, 57)!default;
+$pixel:0.0625rem!default;
+
+$font-color-primary:            #333!default;
+$font-color-secondary:          #3b4966!default;
+$font-color-tertiary:           #5f6368!default;
+$font-color-orange:             #f5861b!default;
+$font-color-blue:               #221c71!default;  
+
+
+$font-family-roboto:            Roboto,sans-serif;
+$font-size-base:                1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                  $font-size-base * 1.25 !default;
+$font-size-sm:                  $font-size-base * .875 !default;
+
+$font-weight-lighter:           lighter !default;
+$font-weight-light:             300 !default;
+$font-weight-normal:            400 !default;
+$font-weight-medium:            500 !default;
+$font-weight-bold:              700 !default;
+$font-weight-bolder:            bolder !default;
+$font-track-h1:                 $pixel * -1.5 !default;
+$font-track-h2:                 $pixel * -0.5 !default;
+$font-track-h3:                 0 !default;
+$font-track-h4:                 $pixel * 0.25 !default;
+$font-track-h5:                 0 !default;
+$font-track-h6:                 $pixel * 0.15 !default;
+$font-track-subtitle:           $pixel * 0.15 !default;
+$font-track-subtitle-dense:     $pixel * 0.1 !default;
+$font-track-body:               $pixel * 0.5 !default;
+$font-track-body-small:         $pixel * 0.25 !default;
+$font-track-btn:                $pixel * 1.25 !default;
+$font-track-caption:            $pixel * 0.4 !default;
+$font-track-overline:           $pixel * 1.5 !default;
+
+$h1-font-size:                $font-size-base * 6 !default;
+$h2-font-size:                $font-size-base * 3.75 !default;
+$h3-font-size:                $font-size-base * 3 !default;
+$h4-font-size:                $font-size-base * 2.125 !default;
+$h5-font-size:                $font-size-base * 1.5 !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
+$subtitle-font-size:          $font-size-base !default;
+$subtitle-dense-font-size:    $font-size-base * 0.875 !default;
+$btn-font-size:               $font-size-base * 0.875 !default;
+$body-font-size:              $font-size-base !default;
+$body-small-font-size:        $font-size-base * 0.875 !default;
+$caption-font-size:           $font-size-base * 0.75 !default;
+$overline-font-size:          $font-size-base * 0.625 !default;
+
+$header-large-height:         $font-size-base * 15!default;
+
+$border-width:                1px !default;
+$border-color:                $gray-300 !default;
+
+$border-radius:               .25rem !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// Grid gutter
+
+$gutter-width:             1.875rem !default;
+
+// define z-indexes
+
+$zindex-dropdown:          100 !default;
+$zindex-sticky:            101 !default;
+$zindex-fixed:             102 !default;
+$zindex-modal-backdrop:    103 !default;
+$zindex-modal:             104 !default;
+$zindex-popover:           105 !default;
+$zindex-tooltip:           106 !default;
+$zindex-ultimate:          999 !default;
+
+// Material box shadows
+
+$box-shadow-2p:       0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)!default;
+
+$grid-columns:  24!default;
+
+// page typography late edition
+
+$page-header-font-size: 3.5rem!default;
+$page-subtitle-font-size: 1.5rem!default;
+$page-header-subtext-font-size: 1rem!default;
+$section-title-font-size: 2rem!default;
+$section-subtitle-font-size: 1.125rem!default;
+
+// Page margins
+
+$section-margin: 6rem!default;

@@ -1,0 +1,312 @@
+
+{
+    "page":{
+        "pageTitle":"Skills",
+        "pageSubtitle":"I have no special talent. I am only passionately curious",
+        "hasQuote":true,
+        "author":"Albert Einsten"
+    },
+    "body": [
+        {
+            "sectionTitle":"Certifications",
+            "style":"certification-card",
+            "sectionData":
+                [
+                    {
+                        "name":"AWS Certified Solution Architect - Associate",
+                        "verifyUrl":"https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2017-07-21&ci=AWS00243852",
+                        "badge":"https://d3nsiji0g4oxek.cloudfront.net/images/AWS.png"
+                    },
+                    {
+                        "name":"Certified Professional Scrum Master - PSMI",
+                        "verifyUrl":"https://www.scrum.org/certificates/259763",
+                        "badge":"https://d3nsiji0g4oxek.cloudfront.net/images/psmi.png"
+                    },
+                    {
+                        "name":"Certified Professional Scrum Master - PSMII",
+                        "verifyUrl":"https://www.scrum.org/certificates/287997",
+                        "badge":"https://d3nsiji0g4oxek.cloudfront.net/images/psmii.png"
+                    },
+                    {
+                        "name":"TMForum Certified Business Development Manager",
+                        "verifyUrl":"http://www.tmforum.org/CareerCertified",
+                        "badge":"https://d3nsiji0g4oxek.cloudfront.net/images/tmforum.jpg"
+                    }
+                
+                ]            
+        },        
+
+        {
+            "sectionTitle":"Skills",
+            "style":"skill-card",
+            "sectionData":[
+                {  
+                    "skillCategory": ["Cloud Deployment"],
+                    "skillDescription":"Cloud Architecting, Migration into cloud and new cloud deployments. Certifed Cloud Architect.",
+                    "logo":"https://d3nsiji0g4oxek.cloudfront.net/images/cloud.svg",
+                    "skills": []
+                },
+                {  
+                    "skillCategory": ["System Integration"],
+                    "skillDescription":"System Integration archtecting. Design and Development of Microservices, Event Driven, REST, SOAP, SOA based services and systems",
+                    "logo":"https://d3nsiji0g4oxek.cloudfront.net/images/integration.svg",
+                    "skills": []
+                },
+                {  
+                    "skillCategory": ["Solution Architecting and Development"],
+                    "skillDescription":"Delivering end to end software solutions to large and challenging business problems",
+                    "logo":"https://d3nsiji0g4oxek.cloudfront.net/images/softdev.svg",
+                    "skills": []
+                },
+                {  
+                    "skillCategory": ["Stakeholder Management"],
+                    "skillDescription":"Comfortable working with senior stakeholders",
+                    "logo":"https://d3nsiji0g4oxek.cloudfront.net/images/stakeholder.svg",
+                    "skills": []
+                },
+                {  
+                    "skillCategory": ["Requirements Analysis"],
+                    "skillDescription":"Requirement gatherig and elicitation, bridge between technical teams and non-technical stakeholders",
+                    "logo":"https://d3nsiji0g4oxek.cloudfront.net/images/analysis.svg",
+                    "skills": []
+                },
+                {  
+                    "skillCategory": ["Automation"],
+                    "skillDescription":"Automating software delivery, infrastructure changes, manual business processes. CI/CD, Build automation, configuration management",
+                    "logo":"https://d3nsiji0g4oxek.cloudfront.net/images/robot.svg",
+                    "skills": []
+                }
+            ]
+        },        
+
+        {
+            "sectionTitle":"Technical Skills",
+            "sectionData":[
+                {
+                    "skillCategory": ["Cloud & Containerization"],
+                    "skills": [
+                        {
+                            "name": "AWS",
+                            "rating": "4"
+                        },
+                        {
+                            "name": "Google Cloud",
+                            "rating": "3"
+                        },
+                        {
+                            "name": "Azure",
+                            "rating": "2"
+                        },
+                        {
+                            "name": "Dockers",
+                            "rating": "3"
+                        },
+                        {
+                            "name": "Kubernetes",
+                            "rating": "2"
+                        }
+                    ]
+                },
+                {
+                    "skillCategory": ["Fullstack"],
+                    "skills": [
+                        {
+                            "name": "Flask",
+                            "rating": "4"
+                        },
+                        {
+                            "name": "Django",
+                            "rating": "3"
+                        },
+                        {
+                            "name": "MongoDB",
+                            "rating": "3"
+                        },
+                        {
+                            "name": "elasticsearch",
+                            "rating": "3"
+                        },
+                        {
+                            "name": "SQLAlchemy",
+                            "rating": "3"
+                        }
+                    ]
+                },
+                {
+                    "skillCategory": [
+                        "Frontend"
+                    ],
+                    "skills": [
+                        {
+                            "name": "ReactJS",
+                            "rating": "4"
+                        },
+                        {
+                            "name": "React Native",
+                            "rating": "4"
+                        },
+                        {
+                            "name": "SCSS/CSS",
+                            "rating": "3"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "rating": "2"
+                        },
+                        {
+                            "name": "Bootstrap",
+                            "rating": "4"
+                        },
+                        {
+                            "name": "Material Design",
+                            "rating": "3"
+                        },
+                        {
+                            "name": "JavaScript",
+                            "rating": "2"
+                        }
+                    ]
+                },
+                {
+                    "skillCategory": [
+                    "Integration"
+                    ],
+                    "skills": [
+                    {
+                        "name": "REST",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "Soap",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "Webservices",
+                        "rating": "2"
+                    },
+                    {
+                        "name": "Kafka",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "RabbitMQ",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "Microservices",
+                        "rating": "2"
+                    }
+                    ]
+                },
+                {
+                    "skillCategory": [
+                    "Build Tools"
+                    ],
+                    "skills": [
+                    {
+                        "name": "webpack",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "git",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "jenkins",
+                        "rating": "2"
+                    },
+                    {
+                        "name": "subversion",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "maven",
+                        "rating": "3"
+                    }
+                    ]
+                },
+                {
+                    "skillCategory": [
+                    "Sotfware Development practises"
+                    ],
+                    "skills": [
+                    {
+                        "name": "agile",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "Scrum",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "TDD",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "XP",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "CI/CD",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "DevOps",
+                        "rating": "3"
+                    }
+                    ]
+                },
+                {
+                    "skillCategory": [
+                    "Operating Systems/Scripting"
+                    ],
+                    "skills": [
+                    {
+                        "name": "Linux",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "Unix",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "Windows",
+                        "rating": "3"
+                    }
+                    ]
+                },
+                {
+                    "skillCategory": [
+                    "Programming Languages"
+                    ],
+                    "skills": [
+                    {
+                        "name": "Perl",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "Python",
+                        "rating": "4"
+                    },
+                    {
+                        "name": "R",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "Java",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "C",
+                        "rating": "3"
+                    },
+                    {
+                        "name": "XSLT",
+                        "rating": "3"
+                    }
+                    ]
+                }
+            ]    
+        }
+    ]
+}

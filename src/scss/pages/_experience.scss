@@ -1,0 +1,80 @@
+/*
+Experience page
+*/
+
+.page-experience{
+    @include above-displays-size("sm"){
+        background: #f35f5e;
+        .page-container{
+            background: transparent;
+        }
+        .page-header-title{
+            color:#fff;
+        }
+        .page-header-subtext{
+            color:#fff;
+        }    
+    }
+}
+.exp-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include above-displays-size("sm"){
+        justify-content: center;
+    }
+    
+}
+.bp-exp{
+    margin: 1.5rem 0;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    .bp-org-website{
+        font-size:0.75rem;
+        color:$font-color-secondary
+    }
+    ul{
+        list-style:none;
+        padding:0;
+        li{
+            //padding-top: 5px;
+        }
+        font-size: 15px;
+        font-family: $font-family-roboto;
+        font-weight: 300;
+        line-height: 1.35rem;  
+    }  
+    .divider{
+        border-left:1px solid #eaeaea;
+        margin: 1rem 0;
+    }
+
+}
+/*
+
+*/
+.badge-logo{
+    min-height:124px;
+    min-width: 124px;;
+    width:100%;
+    flex: 1 1 100%;
+    background-repeat: no-repeat;    
+    background-size: contain;    
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.exp-card{
+    @extend .bp-card;
+    
+    border-radius: 10px;
+    margin: $gutter-width/2;
+    margin: 0;
+    @include above-displays-size("sm"){
+        margin-left:0;
+    }
+    border: none;
+    background: transparent;
+    
+}

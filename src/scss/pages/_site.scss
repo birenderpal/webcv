@@ -1,0 +1,27 @@
+.page-site{
+    background:#31355b;
+    .page-container{
+        background: transparent;
+        .page-header-title{
+            color: #f5861b;
+        }        
+        .page-header-subtext{
+            color: silver;
+        }
+    }
+
+}
+.arch-image{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.primary-background{
+    @include below-displays-size("md"){
+        margin: 1rem 0;
+    }
+}

@@ -1,0 +1,234 @@
+/*
+    Page wrapper definition.
+    each page have margin to show begining of 
+    new page content or body wrapper would have a background color different 
+    than that of page. Body/content to have a grey tone background if pages are white
+*/
+
+.page{
+    //background: #f2f5fc;
+    padding-bottom: 3rem;
+    position: relative;
+    padding-right:0.625rem; 
+    padding-left:0.625rem;
+    @include above-displays-size("sm"){
+        padding-right:0.9375rem; 
+        padding-left:0.9375rem;    
+    }
+    z-index: $zindex-fixed;
+
+    &.background-primary{
+        background:#fff;
+    }
+    background:#fff;
+    opacity: 1;
+    hr{
+        margin: 20px 0px;
+        @include above-displays-size("sm"){
+            margin: 40px 0px;
+        }        
+        border-color:  $font-color-tertiary;
+        opacity: 0.2;
+        
+    }
+}
+
+.page-container{
+    background: #fff; 
+    &.background-secondary{
+        background: $font-color-secondary;
+    }
+    max-width:1440px;
+    z-index: $zindex-modal;
+    //opacity: 0;
+    &.fade-in {
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+    }
+    
+    @keyframes fadeInOpacity {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+}
+.page-container-cast-shadow{
+    @extend .page-container;
+    @include above-displays-size("sm"){
+        border-radius: 10px;
+        box-shadow: 0 16px 40px 0 rgba(7,2,71,.1);
+        border: 1px solid rgba(7,2,71,.04);
+        //margin: 3rem 0;        
+    }
+}
+
+.page-row{
+    display:flex;
+    flex-flow: row wrap;
+    margin-left: -($gutter-width/3);
+    margin-right: -($gutter-width/3);
+    @include above-displays-size("sm"){
+        margin-left: -($gutter-width/2);
+        margin-right: -($gutter-width/2);
+    }
+    &.centered{
+        justify-content: center
+    }
+    &.pull-left{
+        justify-content: flex-start;
+    }
+    &.pull-right{
+        justify-content: flex-end;
+    }
+    &.reverse{
+        flex-direction: row-reverse;
+    }
+
+}
+
+.page-row.with-column{
+    flex-direction: column;
+    &.reverse{
+        flex-direction:column-reverse;
+    }
+    &.centered{
+        align-items: center;
+    }
+    &.pull-left{
+        align-items: flex-start;
+    }
+    &.pull-right{
+        align-items: flex-end;
+    }
+}
+
+.page-section{
+    &.page-section-padding{
+        padding-right:0.625rem; 
+        padding-left:0.625rem;
+        @include above-displays-size("sm"){
+            padding-right:0.9375rem; 
+            padding-left:0.9375rem;    
+        }
+    }
+}
+.page-section-casts-shadow{
+    @extend .page-section;
+    @include cast-shadow(1);
+}
+
+.page-header{
+    padding-top: 96px;
+    @include below-displays-size("md"){
+        padding-top: 48px;
+    }
+    text-align: center;
+}
+
+.page-header-title{
+    font-size:$page-header-font-size;
+    @include below-displays-size("md"){
+        font-size: ($page-header-font-size*0.875)
+    }
+
+    color: $font-color-orange;
+    font-weight: bold;
+    text-transform: capitalize;
+    &.page-title-lines{
+        @include above-displays-size("sm"){
+            @include include-leading-trailing-line(5rem,2.5px);
+        }    
+    }
+}
+
+.with-lines{
+        @include above-displays-size("sm"){
+            @include include-leading-trailing-line(5rem,2.5px);
+        }    
+
+}
+
+.casts-shadow{
+    @include cast-shadow(1);
+}
+.page-header-subtitle{
+    font-size:      $page-subtitle-font-size;
+    @include below-displays-size("md"){
+        font-size: ($page-subtitle-font-size*0.875)
+    }
+    color:$font-color-secondary;
+}
+
+.page-header-subtext{
+    font-size: $page-header-subtext-font-size;
+    color:$font-color-tertiary;    
+}
+
+.page-content{
+    width: 100%;    
+}
+
+.section-title{
+    font-size: $section-title-font-size;
+    @include below-displays-size("md"){
+        font-size: $section-title-font-size*0.875;
+    }
+    color: $font-color-blue;
+    &.title-centered{
+        text-align: center;
+    }
+    
+}
+.section-subtitle{
+    color: $font-color-orange;
+    font-size: $section-subtitle-font-size;
+    font-weight: bold;
+}
+
+.section-title-subtext{
+    //font-size: $section
+    color: $font-color-secondary;
+    font-weight: 700;
+}
+
+.section-text{
+    white-space: pre-line;
+    color:  $font-color-secondary;
+}
+
+.quote{
+    font-style: italic;
+}
+.section-row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:2.5rem 0;
+    @include below-displays-size("md"){
+        margin:2.5rem*0.875 0;
+    }    
+    color:#3b4966;
+    .space-aroudn{
+        justify-content: space-around;
+    }
+    .space-evenly{
+        justify-content: space-evenly;
+    }
+    .flex-start{
+        justify-content: flex-start;
+    }
+
+}
+
+.primary-background{
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+}

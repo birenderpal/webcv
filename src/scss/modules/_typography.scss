@@ -1,0 +1,103 @@
+// Use Roboto fonts
+.bp-typography{
+    //font-family: 'Work Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    @include font-smoothing();
+}
+
+.bp-upper{
+    text-transform: uppercase!important;
+}
+.bp-lower{
+    text-transform: lowercase!important;
+}
+.bp-capital{
+    text-transform: capitalize!important;
+}
+.bp-underline{
+    text-decoration: underline!important;
+}
+.bp-overline{
+    text-decoration: overline!important;
+}
+
+.bp-typography-h1{
+    font-size: $h1-font-size;
+    @include font($h1-font-size,$font-track-h1);
+    font-weight: $font-weight-lighter;
+}
+.bp-typography-h2{
+    font-size: $h2-font-size;
+    @include font($h2-font-size,$font-track-h2);
+    line-height: $font-size-base * 3.75;
+    font-weight: $font-weight-lighter;
+}
+.bp-typography-h3{
+    font-size: $h3-font-size;
+    @include font($h3-font-size,$font-track-h3);
+    line-height: $font-size-base * 3.125;
+    font-weight: $font-weight-normal;
+}
+.bp-typography-h4{
+    font-size: $h4-font-size;
+    @include font($h4-font-size,$font-track-h4);
+    line-height: $font-size-base * 2.5;
+    font-weight: $font-weight-normal;
+}
+.bp-typography-h5{
+    font-size: $h5-font-size;
+    @include font($h5-font-size,$font-track-h5);
+    line-height: $font-size-base * 2;
+    font-weight: $font-weight-normal;
+}
+.bp-typography-h6{
+    font-size: $h6-font-size;
+    @include font($h6-font-size,$font-track-h6);
+    line-height: $font-size-base * 2;
+    font-weight: $font-weight-medium;
+}
+.bp-typography-subtitle{
+    font-size: $subtitle-font-size;
+    @include font($subtitle-font-size,$font-track-subtitle);
+    line-height: $font-size-base * 1.75;
+    font-weight: $font-weight-normal;
+}
+.bp-typography-subtitle-dense{
+    font-size: $subtitle-dense-font-size;
+    @include font($subtitle-dense-font-size,$font-track-subtitle-dense);
+    line-height: $font-size-base * 1.375;
+    font-weight: $font-weight-medium;
+}
+.bp-typography-body{
+    font-size: $body-font-size;
+    @include font($body-font-size,$font-track-body);
+    line-height: $font-size-base * 2;
+    font-weight: $font-weight-medium;
+}
+
+.bp-typography-body-small{
+    font-size: $body-small-font-size;
+    @include font($body-small-font-size,$font-track-body-small);
+    line-height: $font-size-base * 2;
+    font-weight: $font-weight-medium;
+}
+
+.bp-typography-btn{
+    font-size: $btn-font-size;
+    @include font($btn-font-size,$font-track-btn);
+    line-height: $font-size-base * 2.25;
+    font-weight: $font-weight-medium;
+}
+
+.bp-typography-overline{
+    font-size: $overline-font-size;
+    @include font($overline-font-size,$font-track-overline);
+    line-height: $font-size-base * 2;
+    font-weight: $font-weight-medium;
+}
+.bp-typography-caption{
+    font-size: $caption-font-size;
+    @include font($caption-font-size,$font-track-caption);
+    line-height: $font-size-base * 1.25;
+    font-weight: $font-weight-normal;
+}
