@@ -1,5 +1,6 @@
 .page-site{
-    background:#31355b;
+    //background:#31355b;
+    
     .page-container{
         background: transparent;
         .page-header-title{
@@ -9,6 +10,9 @@
             color: silver;
         }
     }
+    .section-text{
+        padding:0 2rem;
+    }
 
 }
 .arch-image{
@@ -16,7 +20,10 @@
     justify-content: center;
     img{
         width: 100%;
-        height: auto;
+        height: 100%;
+    }
+    @include below-displays-size("sm"){
+        padding-top: 1rem;
     }
 }
 
@@ -24,4 +31,7 @@
     @include below-displays-size("md"){
         margin: 1rem 0;
     }
+}
+.site{
+    margin: 2rem;
 }

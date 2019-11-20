@@ -135,4 +135,51 @@
 .bp-card-collection{
   justify-content:space-evenly;
 }
+.card-list-row{
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  margin: 4rem 0!important;
+}
+.profile-card{
+  background: #fff;
+  border: .8px solid #e7e7e7;
+  min-height: 150px;
+  padding:21px 20px!important;
+  @include above-displays-size("md"){
+    padding: 80px 66px!important;
+    min-height: 415px;
+    border-right: 1px solid #e7e7e7;
 
+  }
+  
+  position: relative;
+  .section-title{
+    font-size: 2rem!important;
+  }
+  &:hover{
+    background: #232F3E;
+    .section-text{
+      color:#DDD;
+    }
+  }
+
+}
+
+.details-card{
+  background: #fff;
+  border: .8px solid #e7e7e7;
+  min-height: 55px;
+  padding: 1rem;
+  @include above-displays-size("md"){
+    padding: 2rem!important;
+    border-right: 1px solid #e7e7e7;
+
+  }
+
+  position: relative;
+  &:hover{
+    background: #232F3E;
+    .section-text{
+      color:#DDD;
+    }
+  }
+}

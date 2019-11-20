@@ -1,7 +1,13 @@
 .bp-text-field{
     margin-top: 24px;
     width: 100%;
-    
+    font-family: 'Titillium Web', sans-serif;
+    .mdc-text-field__input{
+        font-family: 'Titillium Web', sans-serif;
+    }
+    .mdc-floating-label{
+        font-family: 'Titillium Web', sans-serif;
+    }
     @include mdc-text-field-line-ripple-color($font-color-orange);
     @include mdc-text-field-label-color(rgba(0,0,0,.54));
     @include mdc-text-field-bottom-line-color(rgba(0,0,0,.12));

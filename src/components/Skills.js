@@ -30,8 +30,7 @@ export class Skills extends React.Component {
 const Certification = props => {
     return (
         <PageRow className="centered">
-            <div className="span-19">
-                <hr />
+            <div className="span-21">
                 <PageSection>
                     <p className="section-title">{props.sectionTitle}</p>
                     <div className="section-row certificatons">
@@ -50,7 +49,7 @@ const Certification = props => {
 
 const CertificationCard = (props) => {
     return (
-        <div className="exp-card">
+        <div className="exp-card box-shadow">
             <a
                 className="certification-logo"
                 href={props.verifyUrl}
@@ -64,7 +63,7 @@ const CertificationCard = (props) => {
 const SkillMap = props => {
     return (
         <PageRow className="centered">
-            <div className="span-19">
+            <div className="span-21">
                 <p className="section-title">{props.sectionTitle}</p>
                 <SectionRow hasGutters={false}>
                     {props.sectionData.map((item, key) => {
@@ -73,7 +72,7 @@ const SkillMap = props => {
                                 <p className="skill-category section-subtitle">{item.skillCategory}</p>
                                 <div className="tech-skill-card-body">
                                     {item.skills.map((skill, key) =>
-                                        <p key={`${key}-${skill}`}><span className="skill-badge-grey">{skill.name}</span></p>
+                                        <p className="skill-badge-grey" key={`${key}-${skill}`}><span>{skill.name}</span></p>
                                     )}
                                 </div>
                             </div>
@@ -103,7 +102,7 @@ const renderCard = (skill,key) => {
 const SkillCard = props => {
     return (
         <PageRow className="centered">
-            <div className="span-19">
+            <div className="span-21">
                 <p className="section-title">{props.sectionTitle}</p>
                 <SectionRow hasGutters={false}>
                     <div className="skill-card-group">

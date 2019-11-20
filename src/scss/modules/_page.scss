@@ -6,6 +6,10 @@
 */
 
 .page{
+    background: #fff;
+    &:nth-of-type(odd) {
+        background: linear-gradient(35deg,#f5f5f5 65%,#f8f8f8 0);
+    }
     //background: #f2f5fc;
     padding-bottom: 3rem;
     position: relative;
@@ -20,7 +24,6 @@
     &.background-primary{
         background:#fff;
     }
-    background:#fff;
     opacity: 1;
     hr{
         margin: 20px 0px;
@@ -34,7 +37,7 @@
 }
 
 .page-container{
-    background: #fff; 
+    //background: #fff; 
     &.background-secondary{
         background: $font-color-secondary;
     }
@@ -110,6 +113,7 @@
 }
 
 .page-section{
+    margin: 4rem 0;
     &.page-section-padding{
         padding-right:0.625rem; 
         padding-left:0.625rem;
@@ -125,11 +129,29 @@
 }
 
 .page-header{
-    padding-top: 96px;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
     @include below-displays-size("md"){
         padding-top: 48px;
     }
+    //background-color:#232f3e ;
     text-align: center;
+    margin-left: -($gutter-width/3);
+    margin-right: -($gutter-width/3);
+    @include above-displays-size("sm"){
+        margin-left: -($gutter-width/2);
+        margin-right: -($gutter-width/2);
+    }
+    
+}
+
+.page-header-title-group{
+    padding-right:0.625rem; 
+    padding-left:0.625rem;
+    @include above-displays-size("sm"){
+        padding-right:0.9375rem; 
+        padding-left:0.9375rem;    
+    }
 }
 
 .page-header-title{
@@ -163,12 +185,20 @@
     @include below-displays-size("md"){
         font-size: ($page-subtitle-font-size*0.875)
     }
-    color:$font-color-secondary;
+    //color:$font-color-secondary;
+    color:#536171;
+    text-align: center;
+    width: 70%;
+    margin: auto;
 }
 
 .page-header-subtext{
     font-size: $page-header-subtext-font-size;
-    color:$font-color-tertiary;    
+    //color:$font-color-tertiary;    
+    color:#536171;
+    text-align: center;
+    width: 70%;
+    margin: auto;
 }
 
 .page-content{
@@ -177,10 +207,12 @@
 
 .section-title{
     font-size: $section-title-font-size;
+    //padding: 2rem 0;
     @include below-displays-size("md"){
         font-size: $section-title-font-size*0.875;
     }
-    color: $font-color-blue;
+    color:$font-color-orange;
+    //color: $font-color-blue;
     &.title-centered{
         text-align: center;
     }
@@ -199,12 +231,15 @@
 }
 
 .section-text{
-    white-space: pre-line;
     color:  $font-color-secondary;
+    font-weight: 400;
 }
 
 .quote{
     font-style: italic;
+    font-size: 1rem;
+    color: #536171;
+    text-align: center;    
 }
 .section-row{
     display:flex;
@@ -215,7 +250,7 @@
         margin:2.5rem*0.875 0;
     }    
     color:#3b4966;
-    .space-aroudn{
+    .space-around{
         justify-content: space-around;
     }
     .space-evenly{
@@ -225,6 +260,10 @@
         justify-content: flex-start;
     }
 
+}
+.section-row-shadow{
+    box-shadow: 0 10px 40px 10px rgba(140,152,164,.175)!important;
+    border-radius: 4px;
 }
 
 .primary-background{

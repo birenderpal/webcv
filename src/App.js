@@ -1,48 +1,50 @@
 import React from 'react';
-import HeroSection from './components/HeroSection'
-import Header from './components/Header';
-import { Page } from './components/Pages'
-import { Skills } from './components/Skills'
-import { AboutMe } from './components/AboutMe';
-import { Experiences } from './components/Experiences';
 import './styles.scss';
-import Contact from './components/Contact';
-import Site from './components/Site';
+import {Page} from './components'
+import {Header} from './components/Header'
 import throttle from 'lodash.throttle'
+import {urls} from './config/config'
+const navBarItems = new Set()
 
-const links = [
-  {
-    id: 'about',
-    name: 'Profile',
-    component: <AboutMe />
-  },
-  {
-    id: 'experience',
-    name: 'experience',
-    component: <Experiences />
-  },
-  {
-    id: 'skills',
-    name: 'Skills',
-    component: <Skills />
-  },
-  {
-    id: 'contact',
-    name: 'contact',
-    component: <Contact />
-  },
-  {
-    id: 'site',
-    name: 'about',
-    component: <Site />
-  },
-
-]
 class App extends React.Component {
-  state = { isScrolled: false }
-  myRefs = links.map((link) => {
-    return React.createRef();
-  })
+
+  state = { content: [], isScrolled: false, pageRendered: false }
+  myRefs = {}
+
+  renderContent = (content) => {
+    return (
+      content.map((page, key) => {
+        let { component, settings, children } = page
+        if (component === "page") {
+
+          if (settings.navbaritem) {
+            navBarItems.add(settings.name)            
+            settings.id = Array.from(navBarItems).indexOf(settings.name)
+            Array.from(navBarItems).forEach((link) => {
+                this.myRefs[settings.name] = React.createRef()
+                return {link:React.createRef()}
+            })
+
+            return <Page ref={this.myRefs[settings.name]} key={key} {...settings} components={children}>
+          </Page>
+       
+          }
+          return <Page key={key} {...settings} components={children}>
+          </Page>
+        }
+      })
+    )
+  }
+
+  componentDidMount() {
+    const URL = urls.URL        
+    fetch(URL)
+      .then(res => res.json())
+      .then(json => this.setState({ ...json[0] }))
+    
+    window.addEventListener('scroll', this.throttledScrollHandler)
+  }
+
   linkRef = React.createRef();
   scrollListener = () => {
     if (window.scrollY > 1 && this.state.isScrolled === false) {
@@ -51,8 +53,8 @@ class App extends React.Component {
     else if (window.scrollY < 1) {
       this.setState({ isScrolled: false })
     }
-    this.myRefs.forEach((value, key) => {
-      let ref = (value.current.pageRef) ? value.current.pageRef.current : value.current
+    Object.keys(this.myRefs).forEach((value, key) => {
+      let ref = (this.myRefs[value].current.pageRef) ? this.myRefs[value].current.pageRef.current : this.myRefs[value].current      
       if ((window.scrollY + window.innerHeight) > ref.offsetTop) {
         ref.firstChild.classList.add('fade-in')
       }
@@ -61,36 +63,20 @@ class App extends React.Component {
 
   throttledScrollHandler = throttle(this.scrollListener, 100)
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.throttledScrollHandler)
-  }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.throttledScrollHandler)
   }
 
   render() {
-    let contactID = links.findIndex(link => link.id === "contact")
-    return (
-      <div className="bp-typography">
-        <Header ref={this.linkRef} links={links} isScrolled={this.state.isScrolled}>
 
+    return (
+      <div className="App bp-typography">
+        {this.renderContent(this.state.content)}
+        <Header links={Array.from(navBarItems)} isScrolled={this.state.isScrolled}>
         </Header>
 
-        <HeroSection contactId={contactID}
-        />
-
-        {links.map((link, key) => {
-          return (
-            <Page id={key} key={key} className={`page-${link.id}`} ref={this.myRefs[key]}>
-
-              {link.component}
-
-            </Page>
-          )
-        })}
       </div>
-    );
+    )
   }
 }
-
 export default App;

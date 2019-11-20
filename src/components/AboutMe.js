@@ -16,7 +16,7 @@ export class AboutMe extends React.Component{
         </div>
     )
     renderAside = (aside) => (
-                <div className="span-9 side-col">
+                <div className="span-9 side-col box-shadow">
                     {aside.map((section,key)=><DetailsAboutMe {...section} key={key}/>)}
                 </div>
             )
@@ -26,10 +26,7 @@ export class AboutMe extends React.Component{
                 {this.state.page?<PageTitle {...this.state.page}/>:null}
                                 
                 <PageRow className="centered">
-                    <div className="span-19">                        
-                        <p className="span-18 col-centered heading text-centered">
-                            {this.state.page?this.state.page.heading:null}    
-                        </p>
+                    <div className="span-21">                        
                         <SectionRow hasGutters={false}>
                             {this.state.body ? this.renderBody(this.state.body) : null}
 

@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import $ from 'jquery'
 
-class Header extends React.Component {
+export class Header extends React.Component {
     constructor(props){
         super(props)
         this.state={isClicked:false,isScrolled:false}
@@ -68,8 +68,6 @@ class Header extends React.Component {
     )
     }
 }
-export default Header
-
 export const HeaderBar = (props) =>{
     const {
         isFixed,
@@ -100,10 +98,10 @@ export const NavBar = React.forwardRef((props,ref) =>{
     return(
             <div className={navBarClasses}>
                 <nav className={navClasses} ref={ref}>
-                    {links.map((l,k) => (
+                    {links.map((link,k) => (
                         <a key={k} href={`#${k}`} className={navListClasses}            
                                 onClick={(e)=>handleClick(e,isMobileNav)}>
-                                {l.name}
+                                {link}
                             </a>                                            
                     ))}                    
                 </nav>

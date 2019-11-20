@@ -10,7 +10,8 @@ Contact page
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
     */
-    background: #31355b;
+    //background: #31355b;
+    background: #232F3E;
     margin: 0 -0.9375rem;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
@@ -19,7 +20,7 @@ Contact page
             padding-left: 0.9375rem;
         }
     .page-header-subtext{
-        color:#fff;
+        color:#ddd;
     }    
 }
 .contact-btn{
@@ -35,7 +36,12 @@ Contact page
         outline: none;   
     } 
     padding: 0 1.5rem;
-    @include mdc-button-container-fill-color($font-color-orange)
+    transition: 0.25s;
+    //background-color: $font-color-orange;
+    transition-property: transform, background-color;    
+    &:hover{
+        @include mdc-button-container-fill-color(orange)
+    }
 }
 .bp-contact-social{
     text-align: center;
@@ -115,10 +121,10 @@ Contact page
     padding: 1rem;
     border: 1px solid rgba(7, 2, 71, 0.04);
     border-radius: 8px;
-    @include material-box-shadow(2);
+    //@include material-box-shadow(2);
 }
 .message-text{
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 200%;
 }
 .contact-link{
@@ -136,7 +142,7 @@ Contact page
     &:hover{
         border:1px solid $font-color-orange;
         text-decoration: none;
-        background:$font-color-orange;
+        background-color:$font-color-orange;
         color:#fff;
     }    
 }

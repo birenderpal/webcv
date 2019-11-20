@@ -16,7 +16,7 @@
     overflow: hidden;
     vertical-align: middle;
     border-radius: 4px;
-    @include mdc-button-container-fill-color(#07c472)
+    @include mdc-button-container-fill-color($font-color-orange)
 
   }
   .bp-btn:hover{

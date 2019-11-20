@@ -3,17 +3,12 @@ Experience page
 */
 
 .page-experience{
+    //background: #232F3E;
     @include above-displays-size("sm"){
-        background: #f35f5e;
-        .page-container{
-            background: transparent;
-        }
+        //background: #f35f5e;
         .page-header-title{
-            color:#fff;
+            color:#f5861b;
         }
-        .page-header-subtext{
-            color:#fff;
-        }    
     }
 }
 .exp-logo{
@@ -26,10 +21,11 @@ Experience page
     
 }
 .bp-exp{
-    margin: 1.5rem 0;
+    margin: 4.5rem 0;
     background: #fff;
     border-radius: 8px;
     padding: 1rem;
+    min-height: 300px;
     .bp-org-website{
         font-size:0.75rem;
         color:$font-color-secondary
@@ -37,9 +33,7 @@ Experience page
     ul{
         list-style:none;
         padding:0;
-        li{
-            //padding-top: 5px;
-        }
+        
         font-size: 15px;
         font-family: $font-family-roboto;
         font-weight: 300;
@@ -55,8 +49,8 @@ Experience page
 
 */
 .badge-logo{
-    min-height:124px;
-    min-width: 124px;;
+    min-height:100px;
+    min-width: 175px;;
     width:100%;
     flex: 1 1 100%;
     background-repeat: no-repeat;    
@@ -77,4 +71,10 @@ Experience page
     border: none;
     background: transparent;
     
+}
+
+.exp-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

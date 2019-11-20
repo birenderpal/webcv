@@ -14,7 +14,7 @@ export class Experiences extends React.Component {
             )
         }
     renderBody = (body) =>(
-            <div className="span-18">
+            <div className="span-21">
                 {body.map((section,key)=><ExperiencesDetails {...section} key={key}/>)}
             </div>
     )
@@ -50,7 +50,7 @@ const ExperiencesDetails = props =>{
                                 </div>
                             </div>
                             <div className="divider"></div>
-                            <div className="span-16">
+                            <div className="span-16 exp-details">
                                 <p className="section-subtitle">{exp.orgName}</p>
                                 <p className="section-title-subtext">{`${exp.jobTitle}, ${exp.duration}`}</p>
                                 <p className="section-text">

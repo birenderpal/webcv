@@ -48,3 +48,7 @@
 .bp-shadow-16{
     @include material-box-shadow(16);
 }
+
+.box-shadow{
+    box-shadow: 0 10px 40px 10px rgba(140,152,164,.175)!important;
+}
