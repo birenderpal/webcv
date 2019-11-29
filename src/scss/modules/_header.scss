@@ -15,6 +15,10 @@
 .bp-header-fixed{
     
     //background: black;
+    .bp-mobile-drawer .bp-mobile-menu span{
+        background-color: white!important;
+    }
+
     z-index:$zindex-ultimate;
     &:after {
         content: "";
@@ -25,6 +29,12 @@
         min-height: 3.5rem;
         @include above-displays-size("sm"){
             min-height: 2.5rem;
+        }
+        .nav-list-item{
+            color: black!important;
+        }
+        .bp-mobile-drawer .bp-mobile-menu span{
+            background-color: black!important;
         }
         
         //background:#fff;
@@ -122,6 +132,8 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    height: 100%;
+
 }
 .bg-image > img{
     position: absolute;
@@ -131,9 +143,11 @@
     right: -9999px;
     margin: auto;
     min-width: 100%;
-    @include add-blur(8px);
+    height: 100%;
+    /*@include add-blur(8px);
     @include below-displays-size("md"){
             display: none;
     }
+    */
 
 }

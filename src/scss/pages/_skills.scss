@@ -47,8 +47,8 @@
     min-width: 300px;
     @include above-displays-size("sm"){
         min-width: 150px;
-    }
-    
+    }    
+    margin: 1rem 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -57,7 +57,7 @@
     ul{
         color: $font-color-primary;
         width:100%;
-        @include above-displays-size("sm"){
+        @include above-displays-size(sm){
             columns: 2;
             -webkit-columns: 2;
             -moz-columns: 2;    
@@ -155,7 +155,7 @@
 }
 
 .tech-skill-card{
-    border: solid 2px #fff;
+    //border: solid 2px #fff;
     //border-radius: 8px;
     position: relative;
     display: flex;
@@ -167,7 +167,7 @@
     filter: drop-shadow(0 0 16px rgba(9, 9, 9, 0.1));
     /* min-width: 0; */
     /* word-wrap: break-word; */
-    background-color: #fff;
+    //background-color: #fff;
     /* background-clip: border-box; */
     //border: 1px solid rgba(0, 0, 0, 0.125);
     //border-radius: 0.25rem;
@@ -241,6 +241,6 @@
 
 .page-skills{
     .section-title{
-        text-align: center;
+        padding-top: 4rem;
     }
 }

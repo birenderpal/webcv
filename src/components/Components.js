@@ -16,11 +16,14 @@ export const Grid = (props)=>{
         children                
     } = props
     const gridClasses = classnames("page-row",props.class)
-    return(
-        <StyledDiv css={style} className={gridClasses} id={id}>
+    
+        return style && style.length > 1?(<StyledDiv css={style} className={gridClasses} id={id}>
             {children}
-        </StyledDiv>
-    )
+        </StyledDiv>)
+        :
+        (<div className={gridClasses} id={id}>
+            {children}
+        </div>)    
 }
 
 export const Button = props =>{
@@ -28,12 +31,16 @@ export const Button = props =>{
         style,
         text,
         url}=props
-    return(
-        <StyledButton css={style} className={props.class}>
+    return style && style.length > 1?
+        (<StyledButton css={style} className={props.class}>
             {url?<a href={url}>{text}</a>:text}
             
             </StyledButton>
             )
+        :
+        <button className={props.class}>
+            {url?<a href={url}>{text}</a>:text}
+        </button>
 }
 
 const contactMe =(e)=>{

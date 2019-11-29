@@ -140,13 +140,18 @@
   margin: 4rem 0!important;
 }
 .profile-card{
-  background: #fff;
+  //background: #fff;
+  background:#444444;
   border: .8px solid #e7e7e7;
   min-height: 150px;
-  padding:21px 20px!important;
+  padding:calc(1rem + 10vh) calc(2rem + 1vw) !important;
+  .section-text{
+    color: #fff!important;
+  }
+  
   @include above-displays-size("md"){
-    padding: 80px 66px!important;
     min-height: 415px;
+    border: none;
     border-right: 1px solid #e7e7e7;
 
   }
@@ -165,14 +170,22 @@
 }
 
 .details-card{
-  background: #fff;
+  background:#444444;
   border: .8px solid #e7e7e7;
-  min-height: 55px;
+  padding: 1rem;  
+  min-height: 195px;
   padding: 1rem;
+  position: relative;
+  flex: 1 1;
+  margin: 2px 2px;
+  min-width: 240px;  
   @include above-displays-size("md"){
     padding: 2rem!important;
+    border: none;
     border-right: 1px solid #e7e7e7;
-
+  }
+  .section-text{
+    color: #fff!important;
   }
 
   position: relative;
