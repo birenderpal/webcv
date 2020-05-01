@@ -1,112 +1,104 @@
-import React from 'react'
-import classnames from 'classnames'
-import $ from 'jquery'
+import React, { useEffect, useState, useRef } from 'react';
+import classnames from 'classnames';
+import PropTypes, { arrayOf } from 'prop-types';
+import $ from 'jquery';
 
-export class Header extends React.Component {
-    constructor(props){
-        super(props)
-        this.state={isClicked:false,isScrolled:false}
-        this.handleClick = this.handleClick.bind(this)
-        this.linkRef = React.createRef()
-        this.mobileRef = React.createRef()
+export const Header = ({ links, isScrolled, isFixed }) => {
+  const [isOpen, setOpen] = useState(false);
+  const linkRef = useRef(null);
+  const mobileRef = useRef(null);
+
+  useEffect(() => {
+    if (!isScrolled) {
+      console.log('remove active class');
+      console.log(linkRef);
+      linkRef.current.childNodes.forEach(elem =>
+        elem.classList.remove('is-clicked'),
+      );
     }
-    
-    componentDidUpdate(){
-        if (!this.props.isScrolled){
-            this.linkRef.current.childNodes.forEach(elem=>elem.classList.remove('is-clicked'))
-        }
-    }    
-    handleClick(e,isMobile){
-        const a = e.currentTarget
-        if (a.hash !== "") {
-            e.preventDefault();
-            var hash = a.hash;
+  }, [isScrolled]);
 
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 1500, function(){
-                
-            });
-            if (isMobile){
-                a.parentNode.childNodes.forEach(elem=>{elem.classList.remove('active')})
-                a.classList.add('active')
-                this.setState({isOpen:!this.state.isOpen})
-            }
-            else{
-                a.parentNode.childNodes.forEach(elem=>{elem.classList.remove('is-clicked')})
-                a.classList.add('is-clicked')
-            }
-        }                          
+  const handleClick = (e, isMobile, index) => {
+    const aTag = e.currentTarget;
+    if (aTag.hash !== '') {
+      e.preventDefault();
+      var hash = aTag.hash;
+
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        1500,
+        function() {},
+      );
+      if (isMobile) {
+        mobileRef.current.childNodes.forEach(elem => {
+          elem.classList.remove('active');
+        });
+        mobileRef.current.childNodes[index].classList.add('active');
+        setOpen(!isOpen);
+      } else {
+        linkRef.current.childNodes.forEach(elem =>
+          elem.classList.remove('is-clicked'),
+        );
+        linkRef.current.childNodes[index].classList.add('is-clicked');
+      }
     }
-    render(){   
-    return (
+  };
+  const headerClasses = classnames('bp-header', 'bp-header-fixed', {
+    'is-scrolled': isScrolled && !isOpen,
+  });
+  return (
+    <header key="header-key" id="header" className={headerClasses}>
+      <div className={classnames('bp-mobile-drawer', { 'is-open': isOpen })}>
+        <button className="bp-mobile-menu" onClick={() => setOpen(!isOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div className="nav nav-align-centre">
+        <nav className="nav-list nav-primary" ref={linkRef}>
+          {links.map((link, index) => (
+            <a
+              key={`${link}-{$index}`}
+              href={`#${index}`}
+              className="bp-upper nav-list-item"
+              onClick={e => handleClick(e, false, index)}
+            >
+              {link}
+            </a>
+          ))}
+        </nav>
+      </div>
+      <div className={classnames('nav-mobile', { 'is-open': isOpen })}>
+        <nav
+          className={classnames('nav-list-mobile', { 'is-open': isOpen })}
+          ref={mobileRef}
+        >
+          {links.map((link, index) => (
+            <a
+              key={`${link}-{$index}`}
+              href={`#${index}`}
+              className="bp-upper nav-mobile-list-item"
+              onClick={e => handleClick(e, true, index)}
+            >
+              {link}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+};
 
-        <HeaderBar isScrolled={this.props.isScrolled && !this.state.isOpen} isFixed={true}>
-            <div className={classnames("bp-mobile-drawer",{ "is-open": this.state.isOpen })}>
-                <button className="bp-mobile-menu" onClick={() => { this.setState({ isOpen: !this.state.isOpen }) }}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    
-                </button>
-            </div>
-            <NavBar 
-                isMobileNav={false}                 
-                links={this.props.links}
-                alignCentre={true}
-                handleClick={this.handleClick}
-                ref={this.linkRef}            
-            />                        
-            <NavBar 
-                isMobileNav={true} 
-                isOpen = {this.state.isOpen} 
-                links={this.props.links}
-                handleClick={this.handleClick}   
-                ref={this.mobileRef}         
-            />
-        </HeaderBar>
-    )
-    }
-}
-export const HeaderBar = (props) =>{
-    const {
-        isFixed,
-        className,
-        isScrolled
-    }=props
+Header.defaultProps = {
+  isFixed: true,
+};
+Header.propTypes = {
+  isFixed: PropTypes.bool,
+  isScrolled: PropTypes.bool,
+  links: PropTypes.array.isRequired,
+};
 
-    const headerClasses = classnames("bp-header", {"bp-header-fixed":isFixed,"is-scrolled":isScrolled},className)
-    return(
-        <header key="header-key" id="header" className={headerClasses}>
-            {props.children}
-        </header>
-
-    )
-}
-export const NavBar = React.forwardRef((props,ref) =>{
-    const {
-        isMobileNav,
-        className,
-        isOpen,
-        handleClick,
-        alignCentre,
-        links
-    } = props
-    const navBarClasses = classnames({"nav":!isMobileNav,"nav-mobile":isMobileNav, "is-open":isOpen,"nav-align-centre":alignCentre})
-    const navClasses = classnames({"nav-list":!isMobileNav,"nav-primary":!isMobileNav},{"nav-list-mobile":isMobileNav,"is-open":isOpen},className)
-    const navListClasses = classnames("bp-upper",{"nav-list-item":!isMobileNav,"nav-mobile-list-item":isMobileNav},className)
-    return(
-            <div className={navBarClasses}>
-                <nav className={navClasses} ref={ref}>
-                    {links.map((link,k) => (
-                        <a key={k} href={`#${k}`} className={navListClasses}            
-                                onClick={(e)=>handleClick(e,isMobileNav)}>
-                                {link}
-                            </a>                                            
-                    ))}                    
-                </nav>
-                
-            </div>        
-    )
-})
-
+Header.displayName = 'Header';
