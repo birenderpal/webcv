@@ -58,7 +58,6 @@ const contactMe = e => {
       1500,
       function() {},
     );
-    //let page_id = hash.replace("#","")
     $(hash)
       .children('.page-container')
       .addClass('fade-in');
