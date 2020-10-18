@@ -1,8 +1,4 @@
 export const urls = {
-    about: "",
-    experience: "",
-    skills: "",
-    contact: "",
-    site: "",
-    cv:""
-}
+  URL: 'production content in json URL',
+  TEST_URL: 'Test content in json URL',
+};

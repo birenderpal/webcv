@@ -10,7 +10,7 @@ const App = () => {
   const [isScrolled, setScrolled] = useState(false);
   const navBarItems = new Set();
   useEffect(() => {
-    const URL = urls.TEST_URL;
+    const URL = urls.URL;
     fetch(URL)
       .then(res => res.json())
       .then(json => setContent(json[0]['content']));
